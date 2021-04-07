@@ -1,0 +1,26 @@
+.grid__parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col_1_4 {
+  grid-column: 1 / 5;
+}
+
+.col_2_4 {
+  grid-column: 5 / 9;
+  @media (max-width: 568px) {
+    grid-column: 1 / 12;
+  }
+}
+
+.col_3_4 {
+  grid-column: 10 / 13;
+  @media (max-width: 568px) {
+    grid-column: 1 / 12;
+  }
+}
+
+.flex {
+  display: flex;
+}

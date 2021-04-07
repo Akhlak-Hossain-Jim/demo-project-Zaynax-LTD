@@ -1,0 +1,180 @@
+$lite_ass: #bababa;
+$lighter_ass: #fafafa;
+$dark_ass: #8f8f8f;
+
+.active {
+  color: $lite_ass;
+}
+
+.drown {
+  display: none;
+}
+
+header {
+  max-width: 1400px;
+  nav {
+    &.nav {
+      padding: 10px 0;
+      border-bottom: 1px solid $lite_ass;
+      &.first__nav {
+        a {
+          &.items {
+            &.nav__items {
+              color: #000;
+              text-decoration: none;
+              font-size: 12px;
+              &.active {
+                color: $lite_ass;
+              }
+              &.second {
+                margin: auto 20px;
+              }
+            }
+          }
+        }
+      }
+      &.secondery_nav {
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 700px;
+        color: $dark_ass;
+        justify-content: space-between;
+        @media (max-width: 568px) {
+          display: grid !important;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        .showing_products {
+          @media (max-width: 568px) {
+            grid-row: 2;
+            margin: 10px;
+            text-align: left !important;
+          }
+        }
+        .filter_by {
+          flex: 1;
+          color: #000;
+          align-items: center;
+          justify-content: space-around;
+          .resp_filter {
+            flex: 2;
+            font-size: 15px;
+            font-weight: 900;
+            justify-content: space-between !important;
+            @media (min-width: 567px) {
+              display: none;
+            }
+          }
+          .filters {
+            flex: 1;
+            font-size: 12px;
+            justify-content: space-around;
+            @media (max-width: 568px) {
+              font-size: 15px;
+              display: none;
+            }
+            .rexp {
+              display: flex;
+              justify-content: space-around;
+            }
+            &.fly {
+              z-index: 200;
+              display: grid;
+              position: fixed;
+              height: 100vh;
+              width: 60vw;
+              right: 0;
+              bottom: 0;
+              place-items: center;
+              background-color: $lighter_ass;
+              animation: leftAnimation 1.6s;
+              @keyframes leftAnimation {
+                from {
+                  margin-right: -100%;
+                  border-radius: 500%;
+                }
+                to {
+                  margin-right: 0;
+                  border-radius: 0;
+                }
+              }
+              .rexp {
+                display: grid;
+                div {
+                  margin: 30px auto;
+                }
+              }
+            }
+            .refined_by,
+            .short_by {
+              color: $dark_ass;
+              font-weight: 700;
+              place-items: center;
+              padding: 0 30px;
+
+              @media (max-width: 568px) {
+                padding: 0;
+              }
+              span {
+                color: #000;
+              }
+            }
+          }
+          .search_bar {
+            flex: 1;
+            justify-content: space-between;
+
+            @media (max-width: 568px) {
+              flex-shrink: 1 !important;
+            }
+            .search {
+              background-color: $lighter_ass;
+              border: 1px solid $lite_ass;
+              border-radius: 4px;
+              place-items: center;
+              margin: auto 5px;
+              @media (max-width: 568px) {
+                border: none;
+                background-color: transparent;
+                justify-content: space-between;
+              }
+              input {
+                padding: 5px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                @media (max-width: 568px) {
+                  display: none;
+                }
+                &.fly {
+                  display: block;
+                  position: absolute;
+                  height: 40px;
+                  margin-top: 100px;
+                  width: 80vw;
+                  left: 10vw;
+                  right: 10vw;
+                  border: 2px solid $lite_ass;
+                  border-radius: 4px;
+                  background-color: $lighter_ass;
+                  animation: leftAnimation 1s;
+                  @keyframes leftAnimation {
+                    from {
+                      left: -100%;
+                    }
+                    to {
+                      left: 10vw;
+                    }
+                  }
+                }
+              }
+              .icon {
+                margin: auto 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
