@@ -9,6 +9,7 @@ div {
   &.app {
     margin: 0 auto;
     padding: 30px 50px;
+    background-color: #fdfdfd;
     @media (max-width: 568px) {
       padding: 10px 20px;
     }
