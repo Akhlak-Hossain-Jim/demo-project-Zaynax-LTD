@@ -31,7 +31,6 @@ function Header() {
             >
               Filter
             </div>
-            <div className="item">Catagory</div>
           </div>
           <div className="filters flex" id="filters">
             <div className="rexp">

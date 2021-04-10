@@ -1,0 +1,43 @@
+$lite_ass: #bababa;
+$lighter_ass: #fafafa;
+$dark_ass: #8f8f8f;
+$green: #52cc8f;
+
+.blogSection {
+  h3,
+  p {
+    text-align: center;
+    line-height: 1.5rem;
+  }
+  h3 {
+    font-weight: 400;
+  }
+  div {
+    margin-top: 20px;
+    justify-content: center;
+    @media (max-width: 568px) {
+      overflow: scroll;
+    }
+    img {
+      margin: 8px;
+      width: 15%;
+      height: auto;
+      border-radius: 10px;
+      @media (max-width: 568px) {
+        width: 40%;
+      }
+    }
+    span {
+      &.indicators {
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: $dark_ass;
+        margin: 5px;
+      }
+      &.active {
+        background-color: $green;
+      }
+    }
+  }
+}

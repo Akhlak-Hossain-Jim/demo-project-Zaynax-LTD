@@ -30,3 +30,15 @@
 .drown {
   display: none;
 }
+
+.mainBody {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.wrap {
+  @media (max-width: 568px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

@@ -28,6 +28,15 @@ const ActiveCategoryBox = ({ name }) => {
 function Catagory() {
   return (
     <div>
+      <div
+        className="resp"
+        id="catagory"
+        onClick={() => {
+          document.querySelector("#catagoryList").classList.toggle("fly");
+        }}
+      >
+        Catagory
+      </div>
       <div id="catagoryList" className="catagories grid_parent">
         <div className="filters_list b_border_das grid_parent">
           <FilterName name="Filters" />
